@@ -6,6 +6,11 @@ import { RecipeComponent } from './recipe/recipe.component';
 import { RecipeHeaderComponent } from './recipe/recipe-header.component';
 import { RecipeListComponent } from './recipe/recipe-list.component';
 import { RecipeItemComponent } from './recipe/recipe-item.component';
+import { RecipeDetailComponent } from './recipe/recipe-detail/recipe-detail.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.component';
+import { DropDownDirective } from './recipe/drop-down.directive';
+import {ShoppingService} from './shopping-list/shopping-service.service';
 
 @NgModule({
   declarations: [
@@ -14,11 +19,15 @@ import { RecipeItemComponent } from './recipe/recipe-item.component';
     RecipeHeaderComponent,
     RecipeListComponent,
     RecipeItemComponent,
+    RecipeDetailComponent,
+    ShoppingListComponent,
+    ShoppingListAddComponent,
+    DropDownDirective,
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
